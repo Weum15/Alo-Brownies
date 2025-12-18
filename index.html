@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alo Brownies - Fresh Baked Daily</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&display=swap"
+        rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:wght@300;400;600&display=block" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Animated Welcome Overlay -->
+    <div class="welcome-overlay" id="welcomeOverlay">
+        <div class="welcome-content">
+            <div class="large-letters">AL</div>
+            <div class="brand-content">
+                <h1 class="welcome-title">Alo Brownies</h1>
+                <p class="welcome-subtitle">EST 2024</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">Alo Brownies</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Alo Brownies</h1>
+            <p> handcrafted brownies and beautifully designed cakes made to celebrate life’s sweetest moments.</p>
+            <button class="cta-button" onclick="scrollToMenu()">View Our Menu</button>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <h2 class="section-title">Our Menu</h2>
+
+        <div class="menu-grid">
+
+            <!-- Cakes -->
+            <div class="menu-card">
+                <h3>Cakes</h3>
+                <ul class="menu-pricing">
+                    <li>
+                        <strong>Red Velvet</strong><br>
+                        6” round — $70<br>
+                        7.5” round — $85<br>
+                        <span class="menu-note">
+                            Cream cheese filling & Swiss meringue buttercream
+                        </span>
+                    </li>
+
+                    <li style="margin-top: 15px;">
+                        <strong>Strawberries & Cream</strong><br>
+                        6” round — $70<br>
+                        7.5” round — $85<br>
+                        <span class="menu-note">
+                            Custard filling with fresh strawberries
+                        </span>
+                    </li>
+                </ul>
+
+                <p class="menu-note">
+                    Prices are based on 3-layer cakes and may vary depending on the number of layers.
+                </p>
+
+            </div>
+
+            <!-- Cupcakes -->
+            <div class="menu-card">
+                <h3>Cupcakes</h3>
+
+                <p class="menu-desc">
+                    Classic and seasonal cupcakes with your choice of frosting.
+                </p>
+
+                <ul class="menu-pricing">
+                    <li>
+                        <strong>Dozen — $40</strong><br>
+                        <span class="menu-note">
+                            Flavours: vanilla, brownie, red velvet
+                        </span>
+                    </li>
+
+                    <li style="margin-top: 12px;">
+                        <strong>Half-dozen — $30</strong><br>
+                        <span class="menu-note">
+                            Frosting options: cream cheese or Swiss meringue buttercream
+                        </span>
+                    </li>
+                </ul>
+            </div>
+
+          
+            <!-- Cake Pops -->
+            <div class="menu-card">
+                <h3>Cake Pops</h3>
+
+                <p class="menu-desc">
+                    Handcrafted cake pops, perfect for events and favours.
+                </p>
+
+                <ul class="menu-pricing">
+                    <li>
+                        <strong>$24 / dozen</strong><br>
+                        <span class="menu-note">
+                            Flavours: golden vanilla, chocolate fudge, birthday cake, lemon
+                        </span>
+                    </li>
+                </ul>
+
+                <p class="menu-note">
+                    Minimum order: 12 cake pops per flavour.
+                </p>
+            </div>
+        </div>
+            
+        <p class="menu-disclaimer">
+            All items are made to order. Prices may vary based on customisation.
+        </p>
+    </section>
+    <!-- Gallery Preview (ADD THIS) -->
+       <section class="gallery-preview">
+           <h2 class="section-title">Our Creations</h2>
+
+           <div class="gallery-grid">
+               <img src="images/cakesLilyP.jpg" alt="Vintage cake">
+               <img src="images/graduationP.jpg" alt="Graduation cake">
+               <img src="images/cupcakeP.jpg" alt="Cupcakes">
+               <img src="images/cakecolorP.jpg" alt="Colourful cake">               
+           </div>
+
+           <a href="gallery.html" class="cta-button">
+               View More
+           </a>
+       </section>
+
+
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Alo Brownies was born from a love of baking and celebrating special moments. We specialize in rich brownies and modern, playful cakes made with quality ingredients and plenty of heart. Whether it’s a big celebration or a small sweet craving, we’re here to make it memorable.</p>
+                    <ul class="features">
+                        <li>✓ Fresh daily baking</li>
+                        <li>✓ High-quality ingredients</li>
+                        <li>✓ Custom orders welcome</li>
+                        <li>✓ Gluten-free options available</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <div class="contact-grid">
+
+                <div class="contact-info">
+                    <h3>Location</h3>
+                    <p>Montreal, QC</p>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Orders</h3>
+                    <p>Home-based dessert studio<br>
+                    Custom orders by request</p>
+                </div>
+
+                <div class="contact-info">
+                    <h3>Contact</h3>
+                    <p>
+                        Instagram: <a href="https://instagram.com/alobrownies" target="_blank">@alobrownies</a><br>
+                        Email: <a href="mailto:alobakery2024@gmail.com">alobakery2024@gmail.com</a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- FAQ Section -->
+    <section id="faq" class="faq">
+        <div class="container">
+            <h2>FAQs</h2>
+
+            <div class="faq-item">
+                <h3>Can I customise my order?</h3>
+                <p>
+                    Yes, absolutely! You can customise your order by choosing your preferred colour scheme and adding an edible image if you wish. We specialise in vintage-style cakes, and while custom details are always welcome, all designs are created within our signature style. Feel free to enquire about any special requests and we’ll be happy to let you know what’s possible.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    
+
+    
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Alo Brownies. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

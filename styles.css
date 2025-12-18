@@ -1,0 +1,447 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    visibility: hidden;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    line-height: 1.6;
+    color: #4A4A4A;
+    background-color: #E8E0D5;
+}
+
+/* Animated Welcome Overlay */
+.welcome-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #E8E0D5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    animation: fadeOut 1s ease-in-out 4s forwards;
+    pointer-events: none;
+}
+.welcome-overlay {
+    opacity: 0;
+}
+
+
+
+.welcome-content {
+    position: relative;
+    text-align: center;
+}
+
+.large-letters {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Great Vibes', cursive;
+    font-size: 20rem;
+    color: rgba(255, 255, 255, 0.3);
+    font-weight: normal;
+    z-index: 1;
+    pointer-events: none;
+    white-space: nowrap;
+    opacity: 0;
+    animation: alFadeIn 1.5s ease-out forwards;
+}
+
+.brand-content {
+    position: relative;
+    z-index: 2;
+    opacity: 0;
+    animation: brandFadeIn 1s ease-out 1.5s forwards;
+}
+
+.welcome-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 5rem;
+    color: #4A4A4A;
+    margin: 0;
+    font-weight: normal;
+}
+
+.welcome-subtitle {
+    font-size: 1.5rem;
+    color: #6B6B6B;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+@keyframes alFadeIn {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(0.8);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+@keyframes brandFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Navigation */
+.navbar {
+    background-color: #E8E0D5;
+    color: #4A4A4A;
+    padding: 1rem 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2rem;
+    font-weight: normal;
+    color: #4A4A4A;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: #4A4A4A;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+.nav-links a:hover {
+    color: #8B7355;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(232, 224, 213, 0.95), rgba(232, 224, 213, 0.95)),
+                url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23D8CFC0" width="1200" height="600"/></svg>');
+    background-size: cover;
+    background-position: center;
+    color: #4A4A4A;
+    text-align: center;
+    padding: 200px 20px 150px;
+    margin-top: 60px;
+}
+
+.hero-content h1 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    font-weight: normal;
+    color: #4A4A4A;
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+    color: #6B6B6B;
+    letter-spacing: 1px;
+}
+
+.cta-button {
+    background-color: transparent;
+    color: #4A4A4A;
+    border: 2px solid #4A4A4A;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 1px;
+}
+
+.cta-button:hover {
+    background-color: #4A4A4A;
+    color: #E8E0D5;
+    transform: translateY(-3px);
+}
+
+/* Menu Section */
+.menu {
+    padding: 80px 20px;
+    background-color: #E2D9CB;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 3rem;
+    margin-bottom: 50px;
+    color: #4A4A4A;
+}
+
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.menu-card {
+    background-color: #F2ECE3;
+    padding: 30px 25px;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+
+.menu-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.menu-desc {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.menu-pricing {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+}
+
+.menu-pricing li {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.menu-note {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 12px;
+}
+
+.menu-disclaimer {
+    font-size: 0.8rem;
+    margin-top: 40px;
+    color: #777;
+}
+
+.price {
+    display: inline-block;
+    background-color: transparent;
+    color: #4A4A4A;
+    padding: 8px 20px;
+    border-radius: 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: 1px solid #4A4A4A;
+    letter-spacing: 0.5px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    max-width: 1100px;
+    margin: 0 auto 40px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 260px;          /* 👈 forces equal height */
+    object-fit: cover;     /* 👈 crops instead of stretching */
+    background-color: #F2ECE3;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+}
+.gallery-preview {
+    text-align: center;
+}
+.img-up {
+    object-fit: cover;
+    object-position: center 20%;
+}
+
+/* About Section */
+.about {
+    padding: 80px 20px;
+    background-color: #E8E0D5;
+}
+
+.about h2 {
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    color: #4A4A4A;
+    margin-bottom: 2rem;
+    font-weight: normal;
+}
+
+.about-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-text p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    color: #5A5A5A;
+    text-align: center;
+}
+
+.features {
+    list-style: none;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.features li {
+    font-size: 1.1rem;
+    padding: 0.5rem 0;
+    color: #6B6B6B;
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 20px;
+    background-color: #D8CFC0;
+}
+
+.contact h2 {
+    text-align: center;
+    font-family: 'Great Vibes', cursive;
+    font-size: 3.5rem;
+    color: #4A4A4A;
+    margin-bottom: 3rem;
+    font-weight: normal;
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    background: #E8E0D5;
+    padding: 2rem;
+    border-radius: 0;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    border: 1px solid #D0C4B0;
+}
+
+.contact-info h3 {
+    color: #4A4A4A;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.contact-info p {
+    color: #5A5A5A;
+}
+
+/* Footer */
+footer {
+    background-color: #C8BCAA;
+    color: #4A4A4A;
+    text-align: center;
+    padding: 2rem 0;
+    border-top: 1px solid #B8AC9A;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .large-letters {
+        font-size: 10rem;
+    }
+    
+    .welcome-title {
+        font-size: 3rem;
+    }
+    
+    .welcome-subtitle {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+    
+    .nav-links {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .menu h2, .about h2, .contact h2 {
+        font-size: 2rem;
+    }
+    
+    .menu-grid {
+        grid-template-columns: 1fr;
+    }
+}
+section {
+    scroll-margin-top: 90px;
+}
+
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
